@@ -34,35 +34,35 @@
 
 <div class="container-contact100">
     <div class="wrap-contact100">
-        <form class="contact100-form validate-form">
+        <form class="contact100-form validate-form" method="POST" action="atendimento/novo.php">
 				<span class="contact100-form-title">
 					Atendimento ao Cliente
 				</span>
 
             <div class="wrap-input100  bg1">
                 <span class="label-input100">Nome completo *</span>
-                <input class="input100" type="text" placeholder="Digite seu nome completo">
+                <input class="input100" type="text" name="name" placeholder="Digite seu nome completo">
             </div>
 
             <div class="wrap-input100  bg1 rs1-wrap-input100">
                 <span class="label-input100">Email *</span>
-                <input class="input100" type="text" placeholder="Digite seu e-mail ">
+                <input class="input100" type="text" name="email" placeholder="Digite seu e-mail ">
             </div>
 
             <div class="wrap-input100 bg1 rs1-wrap-input100">
                 <span class="label-input100">Telefone</span>
-                <input class="input100" type="text" placeholder="(DD) 9 XXXX-XXXX">
+                <input class="input100" type="text" name= "phone" placeholder="(DD) 9 XXXX-XXXX">
             </div>
 
             <div class="wrap-input100 input100-select bg1">
-                <span class="label-input100">Tipo de mensagem *</span>
+                <span for="tm" class="label-input100">Tipo de mensagem *</span>
                 <div>
-                    <select class="js-select2">
-                        <option>Escolha uma opção</option>
-                        <option>Elogio</option>
-                        <option>Crítica</option>
-                        <option>Reclamação</option>
-                        <option>Adquirir novo produto</option>
+                    <select class="js-select2" id="tm" name='tmensagem'>
+                        <option value="">Escolha uma opção</option>
+                        <option value="Elogio">Elogio</option>
+                        <option value="Critica">Crítica</option>
+                        <option value="Reclamacao">Reclamação</option>
+                        <option value="Adquirir-novo-produto">Adquirir novo produto</option>
                     </select>
                     <div class="dropDownSelect2"></div>
                 </div>
@@ -71,10 +71,10 @@
             <div class="wrap-input100 bg1 rs1-wrap-input100">
                 <span class="label-input100">Tipo de cliente *</span><br/>
                 <label class="input100">
-                    <input type="radio"> Novo cliente
+                    <input type="radio" name="tcliente" value="Novo_Cliente"> Novo cliente
                 </label>
                 <label class="input100">
-                    <input type="radio"> Cliente antigo
+                    <input type="radio" name="tcliente" value="Cliente_Antigo"> Cliente antigo
                 </label>
             </div>
 
@@ -82,17 +82,17 @@
                 <span class="label-input100">Deseja receber ligação?</span><br/>
                 <br/>
                 <label class="input100">
-                    <input type="checkbox"> Sim, pode me ligar
+                    <input type="checkbox" name="ligsim" value="Concondo_em_receber_ligação"> Sim, pode me ligar
                 </label>
             </div>
 
             <div class="wrap-input100  bg0 ">
                 <span class="label-input100">Mensagem do cliente *</span>
-                <textarea class="input100" placeholder="Escreva sua mensagem aqui..."></textarea>
+                <textarea type="text" name="mensagem" class="input100" placeholder="Escreva sua mensagem aqui..."></textarea>
             </div>
 
             <div class="container-contact100-form-btn">
-                <button class="contact100-form-btn" type="submit">
+                <button class="contact100-form-btn" type="submit" name="enviar" value="Enviar"> 
 						<span>
 							Abrir atendimento
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
